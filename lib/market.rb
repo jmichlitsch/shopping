@@ -62,6 +62,8 @@ class Market
   end
 
  def sell(item, quantity)
+   #if statement that accounts for nil items and not enough items
+   #to account for edge case of overpurchases
    vendors_that_sell(item).each do |vendor|
      if vendor.check_stock(item) >= quantity
        vendor.sell(item,quantity)
