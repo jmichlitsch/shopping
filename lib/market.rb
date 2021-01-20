@@ -1,3 +1,4 @@
+require 'date'
 class Market
 
   attr_reader :name,
@@ -57,4 +58,9 @@ class Market
       item.name
     end.sort
   end
+
+  def date
+   Date.today.strftime("%d/%m/%y").to_s
+ end
+
 end
